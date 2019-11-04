@@ -1,0 +1,5 @@
+FROM chaps/python_adb
+
+
+RUN pip install -U pip
+RUN pip install py_wa_adb

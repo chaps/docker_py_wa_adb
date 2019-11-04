@@ -1,0 +1,8 @@
+FROM python:3.6
+
+RUN curl -o platform_tools.zip https://dl.google.com/android/repository/platform-tools_r29.0.4-linux.zip
+RUN unzip platform_tools.zip 
+
+RUN ln -s $(pwd)platform-tools/adb /usr/bin/adb
+RUN adb root || true
+
